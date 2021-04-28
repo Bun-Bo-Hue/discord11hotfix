@@ -78,14 +78,6 @@ class ClientDataManager {
             break;
         }
 
-        		try {
-        guild.channels.set(channel.id, channel);
-        } catch (error) {
-  console.error(error);
-        }
-      }
-    }
-
     if (channel && !already) {
       if (this.pastReady) this.client.emit(Constants.Events.CHANNEL_CREATE, channel);
       this.client.channels.set(channel.id, channel);
